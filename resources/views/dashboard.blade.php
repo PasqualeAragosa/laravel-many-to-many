@@ -1,10 +1,9 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
-<div class="container pt-5">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -18,9 +17,6 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
-            <a href="{{route('admin.projects.create')}}" class="btn btn-primary ms-auto align-self-center mt-3">Add
-                Project
-            </a>
         </div>
     </div>
 </div>
