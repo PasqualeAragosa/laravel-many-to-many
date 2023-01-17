@@ -24,8 +24,10 @@
         <thead class="table-light">
             <tr>
                 <th>id</th>
+                <th>image</th>
                 <th>title</th>
                 <th>slug</th>
+                <!-- <th>description</th> -->
                 <th>actions</th>
             </tr>
         </thead>
@@ -33,9 +35,9 @@
             @forelse($projects as $project)
             <tr class="table-primary">
                 <td scope="row">{{$project->id}}</td>
+                <td><img class="edit_form_img" src="{{asset('storage/' . $project->cover_img)}}" alt=""></td>
                 <td>{{$project->title}}</td>
                 <td>{{$project->slug}}</td>
-                <td><img class="edit_form_img" src="{{asset('storage/' . $project->cover_image)}}" alt="{{$project->title}}"></td>
                 <!-- <td>{{$project->description}}</td> -->
                 <td>
                     <a class="btn btn-primary" href="{{route('admin.projects.show', $project->slug)}}"><i class="fa-solid fa-eye"></i></a>
